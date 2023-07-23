@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaiveca- <jaiveca-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 00:51:56 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/07/19 00:51:56 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/07/23 03:38:56 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,24 +15,30 @@
 Cat::Cat(): Animal()
 {
 	std::cout << "Cat: Default constructor called" << std::endl;
-	this->type = "Cat";  
+	this->type = "Cat";
+	this->brain = new Brain;
 }
 
 Cat::Cat(const Cat &cat): Animal(cat)
 {
-	this->type = cat.getType();
 	std::cout << "Cat: Copy constructor called" << std::endl; 	
+	this->type = cat.getType();
+	this->brain = cat.brain;
 }
 
 Cat::~Cat()
 {
-	std::cout << "Cat: Destructor called" << std::endl; 	
+	std::cout << "Cat: Destructor called" << std::endl;
+	delete(this->brain);
 }
 
 Cat	&Cat::operator=(const Cat &cat)
 {
 	if (this != &cat)
+	{
 		this->type = cat.getType();
+		this->brain = cat.brain;		
+	}
 	return (*this);
 }
 
