@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/21 20:27:10 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/07/23 16:37:44 by jaiveca-         ###   ########.fr       */
+/*   Created: 2023/07/19 00:52:31 by jaiveca-          #+#    #+#             */
+/*   Updated: 2023/07/21 17:51:26 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-# define BRAIN_HPP
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
-#include <string>
 #include <iostream>
+#include <string>
 
-class Brain
+class	WrongAnimal
 {
-	public:
+    public:
 
-		Brain();
-		Brain(const Brain &brain);
-		~Brain();
-
-		Brain		&operator=(const Brain &brain);
-		std::string	getIdeas(int i) const;
+        WrongAnimal();
+		WrongAnimal(const WrongAnimal &animal);
+		virtual ~WrongAnimal();
 		
-	private:
-	
-		std::string	ideas[100];
+		WrongAnimal			&operator=(const WrongAnimal &animal);
+        const std::string	&getType(void) const;
+        void				makeSound(void) const;
+
+    protected:
+    
+        std::string	type;
 };
 
 #endif
