@@ -4,7 +4,8 @@ SRCS		= AMateria.cpp\
 				Ice.cpp\
 				ICharacter.cpp\
 				IMateriaSource.cpp\
-				MateriaSource.cpp
+				MateriaSource.cpp\
+				main.cpp
 INCS		= AMateria.hpp\
 				Character.hpp\
 				Cure.hpp\

@@ -6,12 +6,12 @@
 /*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 03:11:50 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/07/24 03:13:19 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/07/24 17:53:04 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
-# define AMATERIA_HPP
+#ifndef IMATERIASOURCE_HPP
+# define IMATERIASOURCE_HPP
 
 #include "AMateria.hpp"
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaiveca- <jaiveca-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 00:51:50 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/07/19 00:51:50 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/07/25 00:29:11 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ const std::string	&Animal::getType(void) const
     return (this->type);
 }
 
-void	Animal::makeSound(void) const
-{
-	std::cout << "Animal says '...'" << std::endl;
-}
+// void	Animal::makeSound(void) const
+// {
+// 	std::cout << "Animal says '...'" << std::endl;
+// }
