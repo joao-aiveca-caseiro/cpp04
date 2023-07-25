@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: jaiveca- <jaiveca-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 00:52:18 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/07/23 17:00:53 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/07/25 15:14:45 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,21 @@ int main(void)
 		else
 			group[i] = new Dog();
 	}
+
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	for (int i = 0; i < 10; i++)
+	{
+		group[i]->makeSound();
+	}
 	
 	std::cout << std::endl;
 	std::cout << std::endl;
 	
 	for (int i = 0; i < 10; i++)
 	{
-			delete(group[i]);
+		delete(group[i]);
 	}
 
 	std::cout << std::endl;

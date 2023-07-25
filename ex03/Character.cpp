@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: jaiveca- <jaiveca-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/24 19:22:58 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/07/25 05:14:54 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/07/25 15:03:39 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ void	Character::equip(AMateria *m)
 	{
         if (m && !storage[i] && m->equipped == 0) 
 		{
-            storage[i] = m->clone();	
+            storage[i] = m->clone();
+			m->equipped = 1;	
             break;
         }
     }
@@ -76,6 +77,7 @@ void	Character::unequip(int idx)
 	if (idx >= 0 && idx < 4 && storage[idx])
 	{
 		storage[idx]->equipped = 0;
+		delete(storage[idx]);
 		storage[idx] = 0;
 	}
 	

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaiveca- <jaiveca-@student.42lisboa.com>   +#+  +:+       +#+        */
+/*   By: jaiveca- <jaiveca-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 00:52:09 by jaiveca-          #+#    #+#             */
-/*   Updated: 2023/07/23 16:55:13 by jaiveca-         ###   ########.fr       */
+/*   Updated: 2023/07/25 15:14:14 by jaiveca-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ Dog::Dog(const Dog &dog): Animal(dog)
 
 Dog::~Dog()
 {
+	delete(this->brain);
 	std::cout << "Dog: Destructor called" << std::endl;
-	delete(this->brain);	
 }
 
 Dog	&Dog::operator=(const Dog &dog)
